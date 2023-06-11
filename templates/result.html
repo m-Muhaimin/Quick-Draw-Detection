@@ -100,9 +100,9 @@
             justify-content: center;
         }
 
-        .drawing svg {
-            width: 160px;
-            height: 160px;
+        .drawing img {
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
@@ -114,17 +114,10 @@
     <div id="content" style="display: none;">
         <div class="card">
             <h1 class="card-title">Classification Result</h1>
-            <div class="drawing">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pen-tool">
-                    <!-- Add your drawing code here -->
-                </svg>
-            </div>
+           
             <p class="result-label">{{ predicted_label }}</p>
             <button onclick="goBack()" class="exit-button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
+                <!-- Existing SVG code -->
                 Exit
             </button>
         </div>
@@ -132,7 +125,7 @@
 
     <script>
         window.addEventListener('load', function() {
-            setTimeout(showContent, 1500); // Simulate a 1.5s loading time
+            setTimeout(showContent, 2000); // Simulate a 1.5s loading time
         });
 
         function showContent() {
